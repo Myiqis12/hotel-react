@@ -1,0 +1,125 @@
+/* Основной стиль футера */
+.footer {
+    position: relative;
+    background-color: #fff;
+    padding: 200px 100px 20px 140px;
+    font-family: 'Montserrat', sans-serif;
+    color: var(--dark-50);
+}
+
+/* Верхняя часть футера */
+.footerTop {
+    display: grid;
+    grid-template-columns: 260px repeat(3, minmax(150px, 1fr)) 300px;    /* Задаём ширины колонок */
+    gap: 30px; /* Отступы между колонками */
+    margin-bottom: 30px;
+    align-items: start; /* Выравниваем содержимое по верхнему краю */
+}
+
+/* Колонка логотипа и описания */
+.footerColumnLogo {
+    grid-column: 1; /* Первая колонка */
+}
+
+/* Последняя колонка */
+.footerColumnSubscribe {
+    grid-column: 5; /* Последняя колонка */
+    max-width: 250px; /* Ограничиваем ширину */
+    line-height: 1.5;
+}
+
+/* Описание */
+.footerDescription {
+    font-size: 14px;
+    line-height: 1.7; /* Оптимальный межстрочный интервал */
+    color: var(--dark-50);
+    width: 270px; /* Фиксированная ширина для укладки в три строки */
+    margin-top: 4%;
+    white-space: normal; /* Разрешаем перенос текста */
+    word-wrap: break-word; /* Перенос длинных слов, если есть */
+}
+
+/* Заголовки */
+.footerTitle {
+    min-width: 170px;
+    font-size: 12px;
+    font-weight: bold;
+    color: var(--dark-100);
+    margin-bottom: 20px;
+}
+
+/* Списки ссылок */
+.footerList {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.footerItem {
+    margin-bottom: 17px;
+}
+
+.footerLink {
+    text-decoration: none;
+    font-size: 14px;
+    color: var(--dark-50);
+    transition: color 0.3s;
+}
+
+.footerLink:hover {
+    color: var(--dark-100);
+}
+
+/* Подписка */
+.footerForm {
+    margin-top: 15px;
+    position: relative;
+    width: 100%;
+}
+
+.footerInput {
+    width: 100%;
+    padding: 10px 40px 10px 10px; /* Делаем отступ справа для кнопки */
+    border: 2px solid var(--dark-25);
+    border-radius: 4px;
+    font-size: 16px;
+}
+
+.footerButton {
+    position: absolute;
+    right: 10px;
+    top: 55%;
+    transform: translateY(-50%);
+    background: none;
+    border: none;
+    cursor: pointer;
+    color: var(--purple);
+    font-size: 18px;
+}
+
+/* Нижняя часть футера */
+.footerDivider {
+    position: absolute;
+    bottom: 14%;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    background-color: var(--dark-50);
+    margin: 0;
+    z-index: 10;
+}
+
+
+.footerBottom {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-top: 20px;
+    font-size: 14px;
+    margin-top: 5%;
+}
+
+.footerSocials {
+    display: flex;
+    gap: 15px;
+}

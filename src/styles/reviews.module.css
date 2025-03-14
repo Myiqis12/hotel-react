@@ -1,0 +1,107 @@
+/* Основной блок */
+.reviews {
+    margin: auto;
+    background-color: #fff;
+    max-width: 750px;
+    padding: 1px 10px 1px 5px;
+}
+
+/* Заголовок блока */
+.reviewsHeader {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 15px;
+}
+
+.reviewsTitle {
+    font-size: 20px;
+    font-weight: bold;
+    color: var(--dark-100);
+}
+
+.reviewsCount {
+    font-size: 14px;
+    color: var(--dark-50);
+}
+
+/* Список отзывов */
+.reviewsList {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+/* Отзыв */
+.reviewsItem {
+    display: flex;
+    gap: 15px;
+    padding: 15px;
+    background: var(--light-100);
+    border-radius: 10px;
+}
+
+/* Аватарка */
+.reviewsAvatarBlock {
+    flex-shrink: 0;
+}
+
+.reviewsAvatar {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+/* Контент отзыва */
+.reviewsContent {
+    flex: 1;
+}
+
+.reviewsName {
+    font-size: 16px;
+    font-weight: bold;
+    color: var(--dark-100);
+}
+
+.reviewsDate {
+    margin-top: 3px;
+    font-size: 12px;
+    color: var(--dark-50);
+}
+
+.reviewsText {
+    margin-top: 5px;
+    font-size: 14px;
+    color: var(--dark-75);
+    line-height: 1.5;
+}
+
+/* Лайк */
+.reviewsIcon {
+    position: relative;
+    display: block; /* Flexbox для текста */
+    justify-content: center; /* Центрируем текст по горизонтали */
+    align-items: center; /* Центрируем текст по вертикали */
+    padding: 5px 7px;
+    border: 2px solid;
+    color: var(--dark-25);
+    border-radius: 25px;
+    text-align: center;
+    text-decoration: none;
+    font-size: 10px;
+    transition: all 0.3s ease;
+    cursor: pointer;
+}
+
+.reviewsIcon:hover {
+    color: var(--dark-50);
+}
+
+.reviewsIcon.liked {
+    color: var(--purple);
+    box-shadow: 0 1px 3px var(--purple);
+}

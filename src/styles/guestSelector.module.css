@@ -1,0 +1,119 @@
+.guestSelector {
+    position: relative;
+    width: 100%;
+  }
+  
+  .guestInputWrapper {
+    display: flex;
+    align-items: center;
+    padding: 8px;
+    border: 2px solid var(--dark-25);
+    border-radius: 5px;
+    cursor: pointer;
+    background: white;
+  }
+  
+  .guestInput {
+    width: 100%;
+    border: none;
+    font-size: 14px;
+    color: var(--dark-75);
+    background: none;
+    cursor: pointer;
+  }
+  
+  .guestIcon {
+    color: var(--dark-50);
+  }
+  
+  .guestDropdown {
+    position: absolute;
+    top: 91%;
+    left: 0;
+    width: 100%;
+    background: white;
+    border: 2px solid var(--dark-25);
+    border-top-left-radius: 0;
+    border-top-right-radius: 0;
+    border-bottom-left-radius: 5px;
+    border-bottom-right-radius: 5px;
+    padding: 10px;
+    z-index: 10;
+  }
+  
+  .guestRow {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 6px;
+    padding: 0 10px;
+  }
+  
+  .guestType {
+    font-size: 12px;
+    font-weight: bold;
+  }
+  
+  .guestControls {
+    display: flex;
+    align-items: center;
+    gap: 4px;
+  }
+  
+  .guestButton {
+    background-color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 35px;
+    height: 35px;
+    border: 1px solid var(--dark-50);
+    color: var(--dark-50);
+    border-radius: 50%;
+    font-size: 18px;
+    transition: all 0.3s ease;
+    cursor: pointer;
+  }
+  
+  .guestNumber {
+    width: 20px;
+    text-align: center;
+    padding: 4px;
+    font-size: 12px;
+    font-weight: bold;
+  }
+  
+  .guestError {
+    color: red;
+    font-size: 12px;
+    text-align: center;
+    margin-top: 4px;
+  }
+  
+  .guestActions {
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    gap: 130px;
+  }
+
+/* Стили для кнопок */
+.clearButton,
+.applyButton {
+  flex: 1;
+  padding: 10px;
+  font-size: 14px;
+  font-weight: bold;
+  text-transform: uppercase;
+  border: none;
+  cursor: pointer;
+  color: var(--purple);
+  background: transparent;
+}
+
+/* Наведение */
+.clearButton:hover, .applyButton:hover {
+  text-decoration: underline;
+}

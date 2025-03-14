@@ -1,0 +1,169 @@
+.header {
+    display: flex;
+    justify-content: space-between; /* Логотип, центр и кнопки */
+    align-items: center;
+    padding: 20px 40px;
+    background-color: white;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+/* Логотип */
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-left: 7%;
+}
+
+.logo img {
+    height: 40px; /* Размер логотипа */
+}
+
+.logo span {
+    font-size: 24px;
+    font-weight: bold;
+    color: var(--dark-100);
+}
+
+/* Навигация */
+.nav {
+    display: flex;
+    gap: 20px;
+    align-items: center;
+    margin-left: 23%;
+    margin-right: 2%;
+}
+
+.nav a {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    padding: 4px 7px;
+    border: 1px solid transparent;
+    text-decoration: none;
+    color: var(--dark-50);
+    font-size: 14px;
+    width: max-content;
+    transition: color 0.3s ease;
+}
+
+.nav a:hover,
+.nav a.active {
+    color: var(--dark-100);
+}
+
+.nav-about {
+    color: var(--dark-75);
+    font-weight: 700;
+}
+
+/* Кнопки авторизации */
+.authButtons {
+    display: flex;
+    gap: 15px;
+    margin-right: 100px;
+}
+
+/* Кнопка "Войти" */
+.btnOutline {
+    padding: 10px 20px;
+    border: 2px solid;
+    color: var(--purple);
+    border-radius: 25px;
+    text-decoration: none;
+    font-size: 12px;
+    font-weight: bold;
+    transition: all 0.2s ease;
+}
+
+.btnOutline:hover {
+    border-color: var(--primary-gradient);
+    background: var(--primary-gradient);
+    color: white;
+    transform: scale(1.1); /* Плавное увеличение */
+}
+
+/* Кнопка "Зарегистрироваться" */
+.btnGradient {
+    padding: 10px 20px;
+    background: var(--primary-gradient);
+    color: white;
+    border: 2px solid;
+    border-radius: 25px;
+    text-decoration: none;
+    font-size: 12px;
+    font-weight: bold;
+    transition: all 0.2s ease;
+}
+
+.btnGradient:hover {
+    background: white;
+    color: var(--purple);
+    border-color: var(--purple);
+    transform: scale(1.05);
+}
+/* Контейнер дропдауна */
+.dropdown {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+}
+
+/* Кнопка-дропдаун */
+.dropdownToggle {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    cursor: pointer;
+}
+
+/* Скрытый список */
+.dropdownContent {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background: white;
+    border: 1px solid var(--dark-25);
+    border-radius: 5px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    min-width: 180px;
+    z-index: 1000;
+    display: flex;
+    flex-direction: column;
+}
+
+/* Стили ссылок внутри выпадающего списка */
+.dropdownContent a {
+    display: block;
+    padding: 10px 15px;
+    color: var(--dark-50);
+    text-decoration: none;
+    transition: background 0.2s;
+    width: 100%;
+}
+
+.dropdownContent a:hover {
+    background: var(--dark-5);
+}
+
+/* Анимация появления */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(-5px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.dropdownContent {
+    animation: fadeIn 0.2s ease-in-out;
+}
+
+/* Иконка поворачивается при наведении */
+.dropdown:hover .dropdownToggle img {
+    transform: rotate(180deg);
+    transition: transform 0.3s;
+}

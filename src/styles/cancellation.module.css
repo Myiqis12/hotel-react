@@ -1,0 +1,19 @@
+/* Блок "Отмена" */
+.cancellation {
+    margin-top: 20px;
+    width: 300px;
+    height: auto;
+}
+
+.cancellationTitle {
+    font-size: 18px;
+    font-weight: bold;
+    color: var(--dark-100);
+    margin-bottom: 20px;
+}
+
+.cancellationText {
+    font-size: 14px;
+    color: var(--dark-50);
+    line-height: 1.7;
+}

@@ -1,0 +1,30 @@
+.roomPageContainer {
+    display: grid;
+    grid-template-areas: 
+      "small1 small2 large2"
+      "large1 large1 large2";
+      grid-template-columns: 1fr 1fr 1fr;
+    width: 100%;
+    padding: 0 80px 0 0;
+}
+/* Каждый элемент галереи */
+.roomItem {
+    overflow: hidden;
+    box-sizing: border-box;
+    height: 100%;
+    width: 100%;
+}
+/* Задаём `grid-area` через `nth-child` */
+.roomPageContainer > div:nth-child(1) {
+    grid-area: large1;
+}
+.roomPageContainer > div:nth-child(2) {
+    grid-area: large2;
+    grid-row: span 2; /* Растягиваем на 2 строки */
+}
+.roomPageContainer > div:nth-child(3) {
+    grid-area: small1;
+}
+.roomPageContainer > div:nth-child(4) {
+    grid-area: small2;
+}

@@ -1,0 +1,5 @@
+.rulesAndCancellation {
+    display: flex;
+    align-items: flex-start; /* Выравнивание по верхнему краю */
+    gap: 150px; /* Расстояние между блоками */
+}

@@ -1,0 +1,45 @@
+/* Общий контейнер галереи */
+.gallery {
+    display: grid;
+    grid-template-areas: 
+      "large small1"
+      "large small2";
+    grid-template-columns: 2fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    gap: 0px; /* Временно убираем отступы */
+    width: 100%;
+}
+
+/* Каждый элемент галереи */
+.galleryItem {
+    overflow: hidden;
+    transition: transform 0.1s ease;
+    box-sizing: border-box;
+    height: 100%;
+    width: 100%;
+}
+
+/* Наведение */
+.galleryItem:hover {
+    transform: scale(1.1);
+}
+
+/* Задаём `grid-area` через `nth-child` */
+.gallery > div:nth-child(1) {
+    grid-area: large;
+    grid-row: span 2; /* Растягиваем на 2 строки */
+}
+.gallery > div:nth-child(2) {
+    grid-area: small1;
+}
+.gallery > div:nth-child(3) {
+    grid-area: small2;
+}
+
+/* Изображения */
+.galleryItem img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}

@@ -1,0 +1,99 @@
+/* Основной блок */
+.roomImpressions {
+    max-width: 450px;
+    width: 100%;
+    margin: 40px auto;
+    padding: 20px 10px 1px 1px;
+}
+
+/* Заголовок */
+.roomImpressionsTitle {
+    font-size: 20px;
+    font-weight: 700;
+    color: var(--dark-100);
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+/* Контейнер для диаграммы и списка */
+.roomImpressionsContent {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 40px;
+}
+
+/* Диаграмма */
+.circularChart {
+    width: 120px;
+    height: 120px;
+    position: relative;
+    border-radius: 50%;
+    overflow: hidden;
+}
+
+/* Сектора диаграммы */
+.chartSlice {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+}
+
+/* Внутренний круг с текстом */
+.chartCenter {
+    width: 110px;
+    height: 110px;
+    background-color: white;
+    border-radius: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+/* Текст внутри круга */
+.chartValue {
+    font-size: 24px;
+    font-weight: bold;
+    color: var(--purple);
+}
+
+.chartText {
+    font-size: 16px;
+    font-weight: 600;
+    color: var(--purple);
+}
+
+/* Список оценок */
+.roomImpressionsList {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.roomImpressionsItem {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 16px;
+    font-weight: 400;
+    color: var(--dark-75);
+}
+
+/* Точки для списка */
+.roomImpressionsDot {
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    flex-shrink: 0;
+}

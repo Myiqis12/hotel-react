@@ -1,0 +1,69 @@
+/* Блок "Сведения о номере" */
+.roomDetails {
+    max-width: 300px; /* Оптимальная ширина */
+    margin: 40px auto; /* Центрируем */
+    padding: 20px 10px 1px 40px;
+    width: 100%;
+}
+
+/* Заголовок */
+.roomDetailsTitle {
+    font-size: 20px;
+    font-weight: 700;
+    color: var(--dark-100);
+    margin-bottom: 20px;
+    text-align: left;
+}
+
+/* Список */
+.roomDetailsList {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+/* Элемент списка */
+.roomDetailsItem {
+    display: flex;
+    align-items: flex-start;
+    gap: 15px;
+    padding-bottom: 15px;
+}
+
+/* Граница для отдельных элементов */
+.roomDetailsItemBorder {
+    border-bottom: 2px solid var(--dark-25);
+    padding-bottom: 15px;
+    gap: 15px;
+    display: flex;
+    align-items: flex-start;
+}
+
+/* Иконка */
+.roomDetailsIcon {
+    flex-shrink: 0;
+}
+
+/* Информация */
+.roomDetailsInfo {
+    display: flex;
+    flex-direction: column;
+}
+
+.roomDetailsSubtitle {
+    font-size: 14px;
+    font-weight: 700;
+    color: var(--dark-50);
+    margin: 0;
+}
+
+.roomDetailsDescription {
+    font-size: 14px;
+    font-weight: 400;
+    color: var(--dark-50);
+    margin-top: 5px;
+    width: 100%; /* Гибкость */
+}
