@@ -107,6 +107,7 @@
     display: flex;
     align-items: center;
     gap: 6px; /* Отступ между текстом и кружком */
+    
 }
 
 .bookingFormCostValue {

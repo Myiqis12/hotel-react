@@ -5,14 +5,15 @@
     padding: 20px 40px;
     background-color: white;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    position: relative;
 }
 
 /* Логотип */
 .logo {
     display: flex;
     align-items: center;
-    gap: 10px;
-    margin-left: 7%;
+    padding-left: 90px;
+    position: relative;
 }
 
 .logo img {
@@ -30,8 +31,7 @@
     display: flex;
     gap: 20px;
     align-items: center;
-    margin-left: 23%;
-    margin-right: 2%;
+    margin-right: 90px;
 }
 
 .nav a {
@@ -59,48 +59,48 @@
 
 /* Кнопки авторизации */
 .authButtons {
-    display: flex;
-    gap: 15px;
-    margin-right: 100px;
+    display: flex !important;
+    gap: 15px !important;
+    margin-left: 15px !important;
 }
 
 /* Кнопка "Войти" */
 .btnOutline {
-    padding: 10px 20px;
-    border: 2px solid;
-    color: var(--purple);
-    border-radius: 25px;
-    text-decoration: none;
-    font-size: 12px;
-    font-weight: bold;
-    transition: all 0.2s ease;
+    padding: 10px 20px !important;
+    border: 2px solid !important;
+    color: var(--purple) !important;
+    border-radius: 25px !important;
+    text-decoration: none !important;
+    font-size: 12px !important;
+    font-weight: bold !important;
+    transition: all 0.2s ease !important;
 }
 
 .btnOutline:hover {
-    border-color: var(--primary-gradient);
-    background: var(--primary-gradient);
-    color: white;
-    transform: scale(1.1); /* Плавное увеличение */
+    border-color: var(--primary-gradient) !important;
+    background: var(--primary-gradient) !important;
+    color: white !important;
+    transform: scale(1.1) !important; /* Плавное увеличение */
 }
 
 /* Кнопка "Зарегистрироваться" */
 .btnGradient {
-    padding: 10px 20px;
-    background: var(--primary-gradient);
-    color: white;
-    border: 2px solid;
-    border-radius: 25px;
-    text-decoration: none;
-    font-size: 12px;
-    font-weight: bold;
-    transition: all 0.2s ease;
+    padding: 10px 20px !important;
+    background: var(--primary-gradient) !important;
+    color: white !important;
+    border: 2px solid !important;
+    border-radius: 25px !important;
+    text-decoration: none !important;
+    font-size: 12px !important;
+    font-weight: bold !important;
+    transition: all 0.2s ease !important;
 }
 
 .btnGradient:hover {
-    background: white;
-    color: var(--purple);
-    border-color: var(--purple);
-    transform: scale(1.05);
+    background: white !important;
+    color: var(--purple) !important;
+    border-color: var(--purple) !important;
+    transform: scale(1.05) !important;
 }
 /* Контейнер дропдауна */
 .dropdown {
@@ -122,6 +122,7 @@
     position: absolute;
     top: 100%;
     left: 0;
+    right: 0;
     background: white;
     border: 1px solid var(--dark-25);
     border-radius: 5px;
@@ -166,4 +167,61 @@
 .dropdown:hover .dropdownToggle img {
     transform: rotate(180deg);
     transition: transform 0.3s;
+}
+
+/* Бургер-меню */
+.burgerMenu {
+    display: none;
+    flex-direction: column;
+    cursor: pointer;
+    gap: 5px;
+}
+
+.burgerMenu span {
+    width: 30px;
+    height: 3px;
+    background-color: black;
+}
+
+/* Адаптивность */
+@media (max-width: 1091px) {
+    .logo {
+        margin: auto;
+        padding: 0;
+    }
+    .nav {
+        display: none;
+        flex-direction: column;
+        position: absolute;
+        top: 70px;
+        right: 20px;
+        background: white;
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+        padding: 15px;
+        border-radius: 5px;
+        width: 200px;
+        margin-right: 0;
+        z-index: 999;
+    }
+
+    .nav.navOpen {
+        display: flex;
+    }
+
+    .burgerMenu {
+        display: flex;
+    }
+
+    .authButtons {
+        flex-direction: column;
+        align-items: center;
+        margin: 0 !important;
+        margin-right: 0 !important;
+    }
+    .btnOutline {
+        width: 180px !important;
+    }
+    .btnGradient {
+        width: 185px !important;
+    }
 }

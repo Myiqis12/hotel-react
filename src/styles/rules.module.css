@@ -1,7 +1,5 @@
 /* Блок "Правила" */
 .rules {
-    margin-left: 140px;
-    margin-top: 20px;
     width: 240px;
     height: auto;
 }
@@ -39,4 +37,10 @@
     flex-shrink: 0;
     background: var(--dark-25);
     margin-top: 0.45em;
+}
+
+@media (max-width: 900px) {
+    .rules{
+        margin: auto;
+    }
 }

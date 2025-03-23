@@ -4,6 +4,7 @@ import styles from "../styles/header.module.css";
 export function Header() {
   const [isServicesOpen, setIsServicesOpen] = useState(false);
   const [isAgreementsOpen, setIsAgreementsOpen] = useState(false);
+  const [isMenuOpen, setIsMenuOpen] = useState(false); // Состояние для бургера
 
   return (
     <header className={styles.header}>
@@ -14,8 +15,15 @@ export function Header() {
         </a>
       </div>
 
+      {/* Бургер-меню (только для мобильных) */}
+      <div className={styles.burgerMenu} onClick={() => setIsMenuOpen(!isMenuOpen)}>
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+
       {/* Навигация */}
-      <nav className={styles.nav}>
+      <nav className={`${styles.nav} ${isMenuOpen ? styles.navOpen : ""}`}>
         <a href="#">О нас</a>
 
         {/* Выпадающее меню "Услуги" */}
@@ -56,9 +64,7 @@ export function Header() {
             </div>
           )}
         </div>
-      </nav>
-
-      {/* Кнопки авторизации */}
+        {/* Кнопки авторизации */}
       <div className={styles.authButtons}>
         <a href="#" className={styles.btnOutline}>
           ВОЙТИ
@@ -67,6 +73,7 @@ export function Header() {
           ЗАРЕГИСТРИРОВАТЬСЯ
         </a>
       </div>
+      </nav>
     </header>
   );
 }

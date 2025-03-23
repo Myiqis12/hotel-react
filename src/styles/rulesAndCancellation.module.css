@@ -2,4 +2,12 @@
     display: flex;
     align-items: flex-start; /* Выравнивание по верхнему краю */
     gap: 150px; /* Расстояние между блоками */
+    padding: 35px 120px;
+}
+
+@media (max-width: 900px) {
+    .rulesAndCancellation{
+        gap: 50px;
+        padding: 35px 0;
+    }
 }

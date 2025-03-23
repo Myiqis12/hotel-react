@@ -6,6 +6,7 @@
       grid-template-columns: 1fr 1fr 1fr;
     width: 100%;
     padding: 0 80px 0 0;
+    gap: 10px;
 }
 /* Каждый элемент галереи */
 .roomItem {
@@ -20,11 +21,33 @@
 }
 .roomPageContainer > div:nth-child(2) {
     grid-area: large2;
-    grid-row: span 2; /* Растягиваем на 2 строки */
 }
 .roomPageContainer > div:nth-child(3) {
     grid-area: small1;
 }
 .roomPageContainer > div:nth-child(4) {
     grid-area: small2;
+}
+
+@media (max-width: 1091px) {
+    .roomPageContainer {
+        grid-template-columns: 1fr 1fr;
+        grid-template-areas: 
+            "small1 small2"
+            "large2 large2"
+            "large1 large1";
+        padding: 0 30px;
+    }
+}
+
+@media (max-width: 778px) {
+    .roomPageContainer {
+        grid-template-areas: 
+            "small1"
+            "small2"
+            "large2"
+            "large1";
+        grid-template-columns: 1fr; /* Теперь всё в один столбец */
+        padding: 0 20px; /* Уменьшаем боковые отступы */
+    }
 }

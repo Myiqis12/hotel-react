@@ -1,6 +1,5 @@
 /* Блок "Отмена" */
 .cancellation {
-    margin-top: 20px;
     width: 300px;
     height: auto;
 }
@@ -16,4 +15,10 @@
     font-size: 14px;
     color: var(--dark-50);
     line-height: 1.7;
+}
+
+@media (max-width: 900px) {
+    .cancellation{
+        margin: auto auto 30px auto;
+    }
 }

@@ -27,7 +27,7 @@
 /* Задаём `grid-area` через `nth-child` */
 .gallery > div:nth-child(1) {
     grid-area: large;
-    grid-row: span 2; /* Растягиваем на 2 строки */
+ /* Растягиваем на 2 строки */
 }
 .gallery > div:nth-child(2) {
     grid-area: small1;
@@ -42,4 +42,14 @@
     height: 100%;
     object-fit: cover;
     display: block;
+}
+
+@media (max-width: 1091px) {
+    .gallery {
+        grid-template-areas: 
+          "large large"
+          "small1 small2";
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 0.7fr 0.5fr;
+    }
 }

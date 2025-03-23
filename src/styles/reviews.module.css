@@ -3,7 +3,7 @@
     margin: auto;
     background-color: #fff;
     max-width: 750px;
-    padding: 1px 10px 1px 5px;
+    padding: 1px 10px 1px 15px;
 }
 
 /* Заголовок блока */
@@ -104,4 +104,10 @@
 .reviewsIcon.liked {
     color: var(--purple);
     box-shadow: 0 1px 3px var(--purple);
+}
+
+@media (max-width: 1091px) {
+    .reviews {
+        padding: 1px 10px 1px 40px;
+    }
 }
